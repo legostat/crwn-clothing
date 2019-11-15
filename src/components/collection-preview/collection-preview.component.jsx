@@ -8,9 +8,11 @@ import {
   PreviewContainer
 } from './collection-preview.styles';
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, routeName }) => (
   <CollectionPreviewContainer>
-    <CollectionPreviewTitle>{title}</CollectionPreviewTitle>
+    <CollectionPreviewTitle to={`/shop/${routeName}`}>
+      {title}
+    </CollectionPreviewTitle>
     <PreviewContainer>
       {items.slice(0, 4).map((item) => (
         <CollectionItem key={item.id} item={item} />
