@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 
-import withSpinner from '../spinner/spinner.component';
+import withSpinner from '../../hoc/with-spinner/with-spinner.component';
 import CollectionsOverview from './collections-overview.component';
 
 const mapStateToProps = createStructuredSelector({
