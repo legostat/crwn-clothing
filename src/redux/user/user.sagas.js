@@ -38,7 +38,10 @@ export function* signInWithGoogle() {
   }
 }
 
-export function* signInWithEmail({ payload: { email, password } }) {
+export function* signInWithEmail(action) {
+  const {
+    payload: { email, password }
+  } = action;
   try {
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
     yield call(getSnapshotFromUserAuth, user);
@@ -47,7 +50,10 @@ export function* signInWithEmail({ payload: { email, password } }) {
   }
 }
 
-export function* signUp({ payload: { email, password, displayName } }) {
+export function* signUp(action) {
+  const {
+    payload: { email, password, displayName }
+  } = action;
   try {
     const { user } = yield auth.createUserWithEmailAndPassword(email, password);
     yield put(signUpSuccess({ user, additionalData: { displayName } }));
@@ -56,7 +62,10 @@ export function* signUp({ payload: { email, password, displayName } }) {
   }
 }
 
-export function* signInAfterSignUp({ payload: { user, additionalData } }) {
+export function* signInAfterSignUp(action) {
+  const {
+    payload: { user, additionalData }
+  } = action;
   yield call(getSnapshotFromUserAuth, user, additionalData);
 }
 
