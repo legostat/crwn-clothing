@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectIsCollectionsLoaded } from '../../redux/shop/shop.selectors';
 
-import withSpinner from '../../components/spinner/spinner.component';
+import withSpinner from '../../hoc/with-spinner/with-spinner.component';
 import CollectionPage from './collection.component';
 
 const mapStateToProps = createStructuredSelector({
