@@ -4,5 +4,4 @@ export const HomePageContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 20px 60px;
 `;
