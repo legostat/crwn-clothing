@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 const OptionContainerStyles = css`
   padding: 10px 15px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 400px) {
+    padding: 5px 7px;
+  }
 `;
 
 export const HeaderContainer = styled.header`
