@@ -26,4 +26,8 @@ export const PreviewContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
+
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
 `;
